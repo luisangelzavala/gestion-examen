@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "617ff8f4-7e5c-492d-a611-5c7022b05f30",
+		"name": "Fonyou - ExamenTecnico",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "3133123"
+	},
+	"item": [
+		{
+			"name": "Estudiante",
+			"item": [
+				{
+					"name": "AltaEstudiante",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Hilda\",\n    \"primerApellido\": \"Hernandez\",\n    \"segundoApellido\": \"Lopez\",\n    \"edad\": 26,\n    \"ciudad\": \"Mexico\",\n    \"zonaHoraria\": \"America/New_York\",\n    \"correoElectronico\": \"correointentado@inventado.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{APP_URL}}:{{APP_PORT}}/estudiante/alta",
+							"protocol": "http",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"port": "{{APP_PORT}}",
+							"path": [
+								"estudiante",
+								"alta"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Examen",
+			"item": [
+				{
+					"name": "CreaExamen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Matematicas\",\n    \"notaExamen\": 100,\n    \"fechaExamen\": \"2023-10-07T09:32:00.000+02:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{APP_URL}}:{{APP_PORT}}/examen/crear"
+					},
+					"response": []
+				},
+				{
+					"name": "CrearExamenCompleto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Programacion\",\n    \"fechaInicioExamen\": \"2023-10-07T09:32:00.000+02:00\",\n    \"fechaFinExamen\": \"2023-10-10T09:32:00.000+02:00\",\n    \"preguntas\": [ \n        { \"descripcion\": \"Pregunta 1 del examen de Programacion\", \n          \"valor\": 10, \n          \"opciones\" : [ { \"descripcion\": \"Opcion Multiple 1\", \"correcta\": true }, \n                         { \"descripcion\": \"Opcion Multiple 2\", \"correcta\": false }, \n                         { \"descripcion\": \"Opcion Multiple 3\", \"correcta\": false },\n                         { \"descripcion\": \"Opcion Multiple 4\", \"correcta\": false } ] }, \n        { \"descripcion\": \"Pregunta 2 del examen de Programacion\", \n          \"valor\": 10,\n          \"opciones\" : [ { \"descripcion\": \"Opcion Multiple 1\", \"correcta\": false }, \n                         { \"descripcion\": \"Opcion Multiple 2\", \"correcta\": true }, \n                         { \"descripcion\": \"Opcion Multiple 3\", \"correcta\": false },\n                         { \"descripcion\": \"Opcion Multiple 4\", \"correcta\": false } ] },\n        { \"descripcion\": \"Pregunta 3 del examen de Programacion\", \n          \"valor\": 10,\n          \"opciones\" : [ { \"descripcion\": \"Opcion Multiple 1\", \"correcta\": false }, \n                         { \"descripcion\": \"Opcion Multiple 2\", \"correcta\": false }, \n                         { \"descripcion\": \"Opcion Multiple 3\", \"correcta\": true },\n                         { \"descripcion\": \"Opcion Multiple 4\", \"correcta\": false } ] },\n        { \"descripcion\": \"Pregunta 4 del examen de Programacion\", \n          \"valor\": 10,\n          \"opciones\" : [ { \"descripcion\": \"Opcion Multiple 1\", \"correcta\": false }, \n                         { \"descripcion\": \"Opcion Multiple 2\", \"correcta\": false }, \n                         { \"descripcion\": \"Opcion Multiple 3\", \"correcta\": false },\n                         { \"descripcion\": \"Opcion Multiple 4\", \"correcta\": true } ] },\n        { \"descripcion\": \"Pregunta 5 del examen de Programacion\", \n          \"valor\": 10,\n          \"opciones\" : [ { \"descripcion\": \"Opcion Multiple 1\", \"correcta\": true }, \n                         { \"descripcion\": \"Opcion Multiple 2\", \"correcta\": false }, \n                         { \"descripcion\": \"Opcion Multiple 3\", \"correcta\": false },\n                         { \"descripcion\": \"Opcion Multiple 4\", \"correcta\": false } ] },\n        { \"descripcion\": \"Pregunta 6 del examen de Programacion\", \n          \"valor\": 10,\n          \"opciones\" : [ { \"descripcion\": \"Opcion Multiple 1\", \"correcta\": false }, \n                         { \"descripcion\": \"Opcion Multiple 2\", \"correcta\": true }, \n                         { \"descripcion\": \"Opcion Multiple 3\", \"correcta\": false },\n                         { \"descripcion\": \"Opcion Multiple 4\", \"correcta\": false } ] },\n        { \"descripcion\": \"Pregunta 7 del examen de Programacion\", \n          \"valor\": 10,\n          \"opciones\" : [ { \"descripcion\": \"Opcion Multiple 1\", \"correcta\": false }, \n                         { \"descripcion\": \"Opcion Multiple 2\", \"correcta\": false }, \n                         { \"descripcion\": \"Opcion Multiple 3\", \"correcta\": true },\n                         { \"descripcion\": \"Opcion Multiple 4\", \"correcta\": false } ] },\n        { \"descripcion\": \"Pregunta 8 del examen de Programacion\", \n          \"valor\": 10,\n          \"opciones\" : [ { \"descripcion\": \"Opcion Multiple 1\", \"correcta\": false }, \n                         { \"descripcion\": \"Opcion Multiple 2\", \"correcta\": false }, \n                         { \"descripcion\": \"Opcion Multiple 3\", \"correcta\": false },\n                         { \"descripcion\": \"Opcion Multiple 4\", \"correcta\": true } ] },\n        { \"descripcion\": \"Pregunta 9 del examen de Programacion\", \n          \"valor\": 10,\n          \"opciones\" : [ { \"descripcion\": \"Opcion Multiple 1\", \"correcta\": true }, \n                         { \"descripcion\": \"Opcion Multiple 2\", \"correcta\": false }, \n                         { \"descripcion\": \"Opcion Multiple 3\", \"correcta\": false },\n                         { \"descripcion\": \"Opcion Multiple 4\", \"correcta\": false } ] },\n        { \"descripcion\": \"Pregunta 10 del examen de Programacion\", \n          \"valor\": 10,\n          \"opciones\" : [ { \"descripcion\": \"Opcion Multiple 1\", \"correcta\": false }, \n                         { \"descripcion\": \"Opcion Multiple 2\", \"correcta\": true }, \n                         { \"descripcion\": \"Opcion Multiple 3\", \"correcta\": false },\n                         { \"descripcion\": \"Opcion Multiple 4\", \"correcta\": false } ] }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{APP_URL}}:{{APP_PORT}}/examen/crearCompleto"
+					},
+					"response": []
+				},
+				{
+					"name": "AsignaPregunta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idExamen\": 1,\n    \"descripcion\": \"Esta es la pregunta 7?\",\n    \"valor\": 1 \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{APP_URL}}:{{APP_PORT}}/examen/agregaPregunta"
+					},
+					"response": []
+				},
+				{
+					"name": "ModificaPregunta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"idExamen\": 1,\n    \"descripcion\": \"Esta es la pregunta?\",\n    \"valor\": 10 \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{APP_URL}}:{{APP_PORT}}/examen/modificaPregunta"
+					},
+					"response": []
+				},
+				{
+					"name": "EliminaPregunta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"idExamen\": 1,\n    \"descripcion\": \"Esta es la pregunta....\",\n    \"valor\": 10 \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{APP_URL}}:{{APP_PORT}}/examen/eliminaPregunta"
+					},
+					"response": []
+				},
+				{
+					"name": "DefineOpcionPregunta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idPregunta\": 5,\n    \"descripcion\": \"Opcion 4\",\n    \"correcta\": false,\n    \"seleccionada\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{APP_URL}}:{{APP_PORT}}/examen/agregarOpcion"
+					},
+					"response": []
+				},
+				{
+					"name": "ModificaOpcion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 5,\n    \"descripcion\": \"Opcion N\",\n    \"correcta\": false,\n    \"seleccionada\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminaOpcion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 5,\n    \"descripcion\": \"Opcion N\",\n    \"correcta\": false,\n    \"seleccionada\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{APP_URL}}:{{APP_PORT}}/examen/eliminaOpcion"
+					},
+					"response": []
+				},
+				{
+					"name": "CambiarExamenDisponible",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"1\",\n    \"nombre\": \"Español\",\n    \"fechaInicioExamen\": \"2023-10-07T09:32:00.000+02:00\",\n    \"fechaFinExamen\": \"2023-10-10T09:32:00.000+02:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{APP_URL}}:{{APP_PORT}}/examen/cambiarExamenDisponible"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GestionExamen",
+			"item": [
+				{
+					"name": "AsignarExamen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idEstudiante\": \"1\",\n    \"idExamen\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{APP_URL}}:{{APP_PORT}}/gestionExamen/asignar"
+					},
+					"response": []
+				},
+				{
+					"name": "EvaluarExamen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idExamen\": \"1\",\n    \"idEstudiante\": \"1\",\n    \"preguntas\": [ { \"id\": \"11\", \"idOpcion\": \"32\"} ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{APP_URL}}:{{APP_PORT}}/gestionExamen/evaluar"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
